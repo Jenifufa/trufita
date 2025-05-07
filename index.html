@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservas en un Vuelo - Caso de Estudio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f5f5f5;
             color: #333;
             margin: 0;
@@ -39,6 +40,7 @@
             margin: 0;
             font-size: 2.2em;
             color: #ff9999;
+            font-weight: 600;
         }
         
         .github-btn {
@@ -50,7 +52,7 @@
             padding: 8px 15px;
             border-radius: 5px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
             transition: background-color 0.3s;
         }
         
@@ -71,6 +73,7 @@
             color: #ff6666;
             border-bottom: 2px solid #eee;
             padding-bottom: 10px;
+            font-weight: 600;
         }
         
         .student-info {
@@ -382,7 +385,11 @@
                     
                     <!-- Flecha de relación -->
                     <div class="relationship-arrow"></div>
-                    <div class="relationship-label">contiene</div>
+                    <div class="relationship-arrow"></div>
+                    <div class="relationship-label">sillasEconomicas (42)</div>
+                    <div class="relationship-label">sillasEjecutivas (8)</div>
+
+
                     
                     <!-- Cuarta fila: Avion -->
                     <div class="diagram-row">
@@ -589,15 +596,17 @@
             
             <h3>Clase Silla</h3>
             <div class="code-block">
+                <span class="keyword">from</span> <span class="function">enum</span> <span class="keyword">import</span> Enum<br>
                 <span class="keyword">class</span> <span class="function">Silla</span>:<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">class</span> <span class="function">Clase</span>:<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EJECUTIVA = <span class="string">"Ejecutiva"</span><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ECONOMICA = <span class="string">"Economica"</span><br>
                 <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">class</span> <span class="function">Ubicacion</span>:<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VENTANA = <span class="string">"Ventana"</span><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CENTRO = <span class="string">"Centro"</span><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PASILLO = <span class="string">"Pasillo"</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">class</span> <span class="function">Clase</span> (Enum):<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EJECUTIVA = <span class="number">1</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ECONOMICA = <span class="number">2</span><br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">class</span> <span class="function">Ubicacion</span> (Enum):<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VENTANA = <span class="number">1</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CENTRO = <span class="number">2</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PASILLO = <span class="number">3</span><br>
                 <br>
                 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">def</span> <span class="function">__init__</span>(<span class="keyword">self</span>, pNumero, pClase, pUbicacion):<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">self</span>.__numero = pNumero<br>
