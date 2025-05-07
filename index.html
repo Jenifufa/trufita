@@ -145,65 +145,13 @@
             padding: 20px;
             margin: 20px 0;
             text-align: center;
-            font-family: 'Courier New', Courier, monospace;
         }
         
-        .class-box {
-            display: inline-block;
-            vertical-align: top;
-            margin: 15px;
-            border: 2px solid #666;
+        .class-diagram img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
             border-radius: 5px;
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .class-title {
-            background-color: #666;
-            color: white;
-            padding: 8px;
-            text-align: center;
-            font-weight: bold;
-            border-top-left-radius: 3px;
-            border-top-right-radius: 3px;
-        }
-        
-        .class-content {
-            padding: 10px;
-            text-align: left;
-        }
-        
-        .class-attribute {
-            margin: 5px 0;
-            padding-left: 10px;
-            border-left: 2px solid #ddd;
-        }
-        
-        .relationship-arrow {
-            position: relative;
-            height: 60px;
-            width: 2px;
-            background-color: #666;
-            margin: 0 auto;
-        }
-        
-        .relationship-arrow::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: -5px;
-            width: 0;
-            height: 0;
-            border-left: 6px solid transparent;
-            border-right: 6px solid transparent;
-            border-top: 10px solid #666;
-        }
-        
-        .relationship-label {
-            text-align: center;
-            font-style: italic;
-            color: #666;
-            margin: 5px 0;
         }
         
         .seat-map-container {
@@ -275,26 +223,6 @@
             border-left: 4px solid #ff9999;
             margin: 15px 0;
         }
-        
-        .diagram-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .diagram-row {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-        }
-        
-        .diagram-middle {
-            display: flex;
-            justify-content: space-around;
-            width: 100%;
-            max-width: 600px;
-            margin: 10px 0;
-        }
     </style>
 </head>
 <body>
@@ -321,87 +249,7 @@
             
             <h2>Diagrama de Clases</h2>
             <div class="class-diagram">
-                <div class="diagram-container">
-                    <!-- Primera fila: Pasajero -->
-                    <div class="diagram-row">
-                        <div class="class-box">
-                            <div class="class-title">Pasajero</div>
-                            <div class="class-content">
-                                <div class="class-attribute">- cedula</div>
-                                <div class="class-attribute">- nombre</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Flecha de relación -->
-                    <div class="relationship-arrow"></div>
-                    <div class="relationship-label">usa</div>
-                    
-                    <!-- Segunda fila: Clase y UbicacionSilla -->
-                    <div class="diagram-middle">
-                        <div class="class-box">
-                            <div class="class-title">Clase</div>
-                            <div class="class-content">
-                                <div class="class-attribute">(enumeración)</div>
-                                <div class="class-attribute">- Ejecutiva</div>
-                                <div class="class-attribute">- Economica</div>
-                            </div>
-                        </div>
-                        
-                        <div class="class-box">
-                            <div class="class-title">UbicacionSilla</div>
-                            <div class="class-content">
-                                <div class="class-attribute">(enumeración)</div>
-                                <div class="class-attribute">- Ventana</div>
-                                <div class="class-attribute">- Central</div>
-                                <div class="class-attribute">- Pasillo</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Flechas hacia arriba -->
-                    <div style="display: flex; justify-content: space-around; width: 100%; max-width: 600px;">
-                        <div style="width: 40%; text-align: center;">
-                            <div class="relationship-arrow" style="transform: rotate(180deg); margin: 0 auto;"></div>
-                        </div>
-                        <div style="width: 40%; text-align: center;">
-                            <div class="relationship-arrow" style="transform: rotate(180deg); margin: 0 auto;"></div>
-                        </div>
-                    </div>
-                    
-                    <!-- Tercera fila: Silla -->
-                    <div class="diagram-row">
-                        <div class="class-box" style="width: 300px;">
-                            <div class="class-title">Silla</div>
-                            <div class="class-content">
-                                <div class="class-attribute">- clase: Clase</div>
-                                <div class="class-attribute">- numero</div>
-                                <div class="class-attribute">- pasajero: Pasajero</div>
-                                <div class="class-attribute">- ubicacion</div>
-                                <div class="class-attribute">- ubicacionSilla: UbicacionSilla</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Flecha de relación -->
-                    <div class="relationship-arrow"></div>
-                    <div class="relationship-arrow"></div>
-                    <div class="relationship-label">sillasEconomicas (42)</div>
-                    <div class="relationship-label">sillasEjecutivas (8)</div>
-
-
-                    
-                    <!-- Cuarta fila: Avion -->
-                    <div class="diagram-row">
-                        <div class="class-box">
-                            <div class="class-title">Avion</div>
-                            <div class="class-content">
-                                <div class="class-attribute">- sillasEconomicas: Silla[]</div>
-                                <div class="class-attribute">- sillasEjecutivas: Silla[]</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <img src="c:\Users\Lenovo\OneDrive - Universidad Cooperativa de Colombia\Imagens\Capturas de tela\Captura de tela 2025-05-06 230511.png" alt="Diagrama de Clases del Sistema de Reservas de Vuelo">
             </div>
             
             <h2>Mapa de Sillas del Avión</h2>
@@ -573,7 +421,7 @@
             
             <div class="example">
                 <h3>Ejemplo 3: Ver Estado</h3>
-                <p>El usuario consulta todas las sillas de clase económica en ubicación pasillo. El sistema muestra las disponibles (verde) y ocupadas (rojo).</p>
+                <p>El usuario consulta todas las sillas de clase económica en ubicación pasillo. El sistema muestra las disponibles (gris) y ocupadas (salmón).</p>
             </div>
         </div>
         
